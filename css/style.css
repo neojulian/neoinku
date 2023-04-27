@@ -1,2 +1,93 @@
-.backgroundverde{
-    background-color: darkgreen;}
+@font-face {
+    font-family: kaji;
+    src: url('/fonts/Khiara\ Script.ttf');
+}
+@font-face {
+    font-family: kai;
+    src: url('/fonts/Harukaze.ttf');
+}
+body{
+    margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 3.25em;}
+ul{list-style: none;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 40px;
+    border:3px solid white;
+    box-shadow: 10px 30px 10px;
+    background-color: crimson;  
+}
+
+button:hover{
+    background-color: white;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: black;
+}
+header .logo{
+    margin: 0;
+    padding: 30px 10px;
+    font-weight: bold;
+    font-family: kaji;
+    color: crimson;
+    font-size: 5.5em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+    font-size: 20px;
+}
+
+header a:hover{
+    color: crimson;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url(/imagenes/Series.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
