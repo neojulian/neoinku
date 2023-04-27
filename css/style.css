@@ -1,10 +1,10 @@
 @font-face {
     font-family: kaji;
-    src: url('/fonts/Khiara\ Script.ttf');
+    src: url('../fonts/Khiara\ Script.ttf');
 }
 @font-face {
     font-family: kai;
-    src: url('/fonts/Harukaze.ttf');
+    src: url('../fonts/Harukaze.ttf');
 }
 body{
     margin: 0;
