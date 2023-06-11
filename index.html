@@ -4,37 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neo Inku Movie Club</title>
+    <title>Portafolio Gongora</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <p class="logo">Inku Movie Club</p>
-            <nav>
-                <a href="#">Top Series</a>
-                <a href="#">Top Movies</a>
-                <a href="#">Registrarme</a>
-            </nav>
-        </div>
-    </header>
-    <section id="hero">
-        <h1>Te recomendamos las mejores series y peliculas</h1>
-        <button>Recomiéndame</button>
-    </section>
-    <section id="tops">
-        <div class="container">
-            <div class="img-container"></div>
-            <h2>Top Series!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi excepturi itaque quisquam cumque voluptate omnis, nobis ipsum eveniet, porro, optio vel dolores illum neque sed. Dolore neque aliquid sapiente nesciunt!</p>
-        </div>
-    </section>
-    <section id="Top Movies">
-        <div class="carta"></div>
-        <div class="carta"></div>
-        <div class="carta"></div>
+<!--Barra de navegacion-->
+
+    <nav class="navbar">
+        <ul class="links-container">
+            <li class="link-item"> <a href="#hero-section" class="links">Inicio</a> </li>
+            <li class="link-item"> <a href="#about-section" class="links">Sobre mi</a> </li>
+            
+            <li class="link-item">
+                <a href="#" class="links">
+                <img src="img/Logo-PhotoRoom.png.png " class="logo" alt="logo">
+                </a>
+            </li>
+            
+            <li class="link-item"> <a href="#skill-section" class="links">Portafolio</a> </li>
+            <li class="link-item"> <a href="#contact-section" class="links">Contacto</a> </li>
+        </ul>
+    </nav>    
 
 
+
+    <section class="hero-section" id="hero-section">
+        <div class="background">
+            <img src="./img/Fondo principal.jpg" class="background-image" alt="hero-section-img">
+        </div>
+
+        <div class="hero-section-content">
+            <h1 class="hero-section-title">
+            <p>Julian Gongora</p>
+            <a href="#" class="typewrite" data-period="2000" data-type='[ "Progamador.", "Administrador.", "Film maker.", "Tatuador." ]'>
+            <span class="wrap"></span>
+            </a>
+            </h1>
+        </div>
     </section>
+    
+
+<!--Sobre mi-->
+    <section class="about" id="about-section">
+        <h2 class="section-title">Sobre<span class="highligth"> Mi</span></h2>
+
+        <div class="about-container">
+            <div class="image-container">
+                <div class="left-col">
+                <div class="square"></div>
+                <img src="./img/about me3.jpg" class="about-img" alt="">
+                <div class="social-links">
+                    <a href="https://github.com/neojulian/neoinku"><img src="./img/github.png" class="social-img" alt=""></a>
+                    <a href="https://www.instagram.com/neo_julian/"><img src="./img/insta.png" class="social-img" alt=""></a>
+                    <a href="https://www.linkedin.com/in/julian-gongora-60035b127/"><img src="./img/linked.png" class="social-img" alt=""></a>
+                    <a href="https://www.youtube.com/channel/UCZCaQSkRuyU4rXHX3HnvqJw"><img src="./img/youtube.png" class="social-img" alt=""></a>
+                </div>
+                </div>
+            </div>
+                <div class="right-col">
+                <div class="info">
+                <p>Me identifico como una persona responsable, honrada, tolerante y centrada en las diferentes situaciones que se me puedan enfrentar, encontrando soluciones a los retos que se me presentan a diario, con un buen manejo de relaciones personales, dispuesto a trabajar en grupos de trabajo</p>
+                <a href="./img/2023 CV Gongora.pdf" download="CV Julian.pdf" class="btn">Descarga CV</a>
+                </div>
+                </div>
+                
+    </section>
+
+    <!--Seccion Grid-->
+
+    <section class="skill" id="skill-section">
+        <h2 class="heading">Portafo<span class="highligth">lio</span></h2>
+        <p class="sub-heading">Experiencias y Skills.</p>
+
+
+        <div class="card-container">
+        <div class="card">
+            <img src="./img/Programador.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Programador</h1>
+                <p class="card-sub-title">Front End</p>
+                <p class="card-info">Como programador front-end, he tenido el privilegio de trabajar en proyectos de desarrollo web. Mi experiencia se centra en la creación de interfaces de usuario atractivas y funcionales utilizando tecnologías como HTML, CSS y JavaScript.</p>
+                <a href="./pages/page1.html" target="_blank" class="card-btn">+ INFO</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./img/Admisnistrador.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Administrador</h1>
+                <p class="card-sub-title">Analista de facturacion</p>
+                <p class="card-info">Como analista de facturación, he sido responsable de garantizar la precisión y eficiencia en los procesos de facturación de una empresa. Mi experiencia involucra la revisión de datos, resolución de discrepancias y colaboración con equipos para asegurar un flujo de facturación efectivo.</p>
+                <a href="./pages/page1.html" target="_blank" class="card-btn">+ INFO</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./img/Film maker.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Film Maker</h1>
+                <p class="card-sub-title">Direccion</p>
+                <p class="card-info">Como filmmaker, he tenido la oportunidad de dirigir y producir proyectos audiovisuales, capturando historias y emociones a través del lenguaje cinematográfico. Mi experiencia implica la creación de narrativas visuales y la colaboración con equipos para crear producciones cinematográficas impactantes.</p>
+                <a href="./pages/page2.html" target="_blank" class="card-btn">+ INFO</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./img/Tatuador.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">Tatuador</h1>
+                <p class="card-sub-title">Blackout</output></p>
+                <p class="card-info">Como tatuador, he tenido el privilegio de crear obras de arte permanentes en la piel de mis clientes. Mi experiencia implica colaborar estrechamente con cada persona, escuchar sus ideas y transformarlas en tatuajes personalizados, brindando una experiencia única y satisfactoria en cada sesión.</p>
+                <a href="./pages/page2.html" target="_blank" class="card-btn">+ INFO</a>
+                
+            </div>
+        </div>
+        </div>
+    
+    </section>
+
+    <section class="contact" id="contact-section">
+        <div class="contact-container">
+        <h2 class="heading">Contacta<span class="highligth">me</span></h2>
+        <p class="sub-heading">Para mayor informacion, me encuentro a disposicion.</p>
+        <div class="seperator"></div>
+
+        <div class="contact-form">
+            <div class="name">
+                <input type="text" class="nombre" required placeholder="Nombre">
+                <input type="text" class="apellido" required placeholder="Apellido">
+            </div>
+            <input type="email" required class="email" placeholder="email">
+            <textarea class="message" placeholder="Mensaje" required></textarea>
+            <button class="btn contact-btn" onclick="window.alert('Gracias por tu interes!!');">ENVIAR</button>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">Pagina Web hecha con quemada de pestañas y cabeza.</footer>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/app.js"></script>
 </body>
 </html>

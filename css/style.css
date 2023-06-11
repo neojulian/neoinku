@@ -1,93 +1,512 @@
-@font-face {
-    font-family: kaji;
-    src: url('../fonts/Khiara\ Script.ttf');
-}
-@font-face {
-    font-family: kai;
-    src: url('../fonts/Harukaze.ttf');
-}
-body{
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{font-size: 3.5em;}
-h2{font-size: 2.7em;}
-h3{font-size: 2em;}
-p{font-size: 3.25em;}
-ul{list-style: none;}
-
-button{
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 10px 40px;
-    border-radius: 40px;
-    border:3px solid white;
-    box-shadow: 10px 30px 10px;
-    background-color: crimson;  
+html {
+    scroll-behavior: smooth;
 }
 
-button:hover{
-    background-color: white;
+:root{
+    --gradient-top: linear-gradient(0deg, rgba(22, 24, 19, 0) 0%, rgba(22, 24, 19, 0.22) 36.98%, rgba(22, 24, 19, 0.47) 70.83%, rgba(22, 24, 19, 0.76) 100%);
+    --gradient-bottom: linear-gradient(180deg, rgba(22, 24, 19, 0) 0%, rgba(22, 24, 19, 0.42) 21.88%, rgba(22, 24, 19, 0.69) 41.67%, rgba(22, 24, 19, 0.9) 61.98%, rgba(22, 24, 19, 0.99) 78.12%, #161813 100%);
+    --sphere-gradient-one: radial-gradient(50% 50% at 20% 25%, #686868 0%, #403F3F 35%, #222222 70%, #000000 100%);
+    --sphere-gradient-two: radial-gradient(51.04% 51.04% at 18.94% 26.18%, #686868 0%, #403F3F 36.98%, #222222 70.83%, #000000 100%);
 }
 
-.container{
-    max-width: 1400px;
-    margin: auto;
+body { 
+    width: 100%;
+    position: relative;
+    background: #161813;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}  
+
+/* barra de navegacion */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100px;
+    padding: 20px 30px;
 }
 
-header{
-    background-color: black;
-}
-header .logo{
-    margin: 0;
-    padding: 30px 10px;
-    font-weight: bold;
-    font-family: kaji;
-    color: crimson;
-    font-size: 5.5em;
+.navbar.bg {
+    background: #161813;
 }
 
-header .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header nav{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 30px;
-}
-
-header a{
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: lighter;
-    color: white;
-    font-size: 20px;
-}
-
-header a:hover{
-    color: crimson;
-}
-
-#hero{
+.links-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    height: 90vh;
-    color: white;
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ) 
-    ,url('../imagenes/Series.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    
+    list-style: none;
 }
+
+.logo   {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.link-item  {
+    margin:  0 30px;
+    transition: .5s;
+}
+
+.link-item a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-family: 'Waiting for the Sunrise';
+    font-size: 28px;
+}
+
+.links {
+    opacity: 0.6;
+}
+
+.links:hover {
+    opacity: 1;
+}
+
+/* seccion hero */
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #27532f;    
+}
+
+/* seccion background */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    }
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.background::before, .background::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.background::before {
+    top: 0;
+    left: 0;
+    background: var(--gradient-top);
+}
+
+.background::after {
+    bottom: 0;
+    left: 0;
+    background: var(--gradient-bottom);
+}
+
+.hero-section-title {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 80px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.typewrite {
+    font-family: 'Waiting for the Sunrise';
+    font-size: 60px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+    align-items: center;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.video {
+    margin: auto;
+    width: 1060px;
+    height: 355px;
+    display: block;
+}
+/* seccion SOBRE MI */
+
+.about {
+    width: 100%;
+    height: auto;
+    padding: 50px 10vw;
+}
+
+#about-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 10vw;
+    color: #ffff;
+}
+
+.about-container {
+    width: 100%;
+    margin: 50px 0 100px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 40% 60%;
+}
+
+.left-col, .right-col{
+    position: relative;
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+}
+
+.about-img {
+    width: 100%;
+    height: 475px;
+    display: block;
+    object-fit: cover;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background: #27532f;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-img {
+    width: 30px;
+    height: 30px;
+    opacity: .4;
+    transition: .5s;
+}
+
+.social-img:hover {
+    opacity: 1;
+}   
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.info {
+    width: 100%;
+    margin-top: 150px;
+}
+
+.info p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 35px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.btn {
+    color: white;
+    background:#27532f;
+    padding: 10px 25px;
+    width: 220px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* seccion GRID Y PORTAFOLIO */
+
+.card-container {
+    margin: 65px 0 100px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid: 50px;
+}
+
+.card {
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}   
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter:blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card:hover .card-body {
+    right: 0;
+}
+
+.card:hover .card-img {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.card-info {
+    font-size: 15px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+    color: black;
+}
+
+.card-btn {
+    color: white;
+    background:#27532f;
+    padding: 5px 20px;
+    width: 120px;
+    border-radius: 100px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+/* seccion Contacto */
+
+.contact-container {
+    margin: 40px 0 100px;
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    opacity: 0.7;
+}
+
+.contact-form {
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.contact-form input, .message{
+    width: 100%;
+    display: block;
+    height: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #000000;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin: 30px 0;
+    text-transform: capitalize;
+    resize: none;
+}
+
+.message {
+    height: 170px;
+}
+
+.contact-form .name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name input {
+    width: 49%;
+    margin: 0;
+}
+
+.contact-form .btn{
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.contact {
+    position: relative;
+    padding: 50px 10vw;
+}
+
+.highligth {
+    color: #27532f;
+}
+
+/* seccion footer */
+
+.footer {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #27532f;
+    text-transform: capitalize;
+    line-height: 30px;
+}
+
+/* seccion responsive */
+
+@media screen and (max-width: 996px) {
+
+    .link-item {
+        margin: 0 10px;
+    }
+
+    .section-title {
+        font-size: 60px;
+    }
+
+    .hero-section-title p {
+        font-size: 60px;
+    }
+
+    .typewrite {
+        font-size: 60px;
+    }
+
+    .card-container {
+        height: 900px;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        align-items: center;
+        left: 50px;
+    }
+
+    .card-container:last-child {
+        grid-column: span 1;
+    }
+
+    .card-body {
+        columns: 2;
+    }
+}
+
+@media screen and (max-width: 798px){
+    .navbar {
+        height: auto;
+    }
+
+    .link-item {
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .link-item:nth-child(3) {
+        margin: -50px -30px 0 -30px;
+    }
+
+    .link-item a {
+        padding: 10px;
+        margin: auto;
+        display: block;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .hero-section-title p {
+        font-size: 40px;
+    }
+
+    .typewrite {
+        font-size: 40px;
+    }
+
+    .about-section {
+        width: 100%;
+        font-size: 4opx;
+    }
+
+    .card-container {
+        height: auto;
+        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card-body {
+        grid-column: auto !important;
+    }
+
+    .card {
+        border-radius: 70px;
+    }
+    }
